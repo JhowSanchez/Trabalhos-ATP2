@@ -1,11 +1,3 @@
-//Exclusoes Logicas, Fisicas, Fisicas especificas, relatorios
-
-//terminar
-
-//jhoow
-//Consulta, colocar orden nas fim exclu 
-//conferir se o codigo ta utilizando todas as busca e ord
-//testar codigo por codigo 
 #include <stdio.h>
 #include <conio2.h>
 #include <stdlib.h>
@@ -1457,7 +1449,7 @@ void exclusaoLogicaJogos(void)
 				fseek(arq,pos,0);
 				fread(&reg,sizeof(reg),1,arq);
 				ir(l); printf("Deseja realmente EXCLUIR o jogo (%s) SIM (S) ou NAO (N)",reg.descr);
-				ir(l); printf("Excluir esse jogo também ira excluir campeonatos cadastrados com esse jogo!");
+				ir(l); printf("Excluir esse jogo tambÃ©m ira excluir campeonatos cadastrados com esse jogo!");
 				do
 				{
 					op = toupper(getch());
@@ -1546,7 +1538,7 @@ void exclusaoLogicaParticipantes(void)
 				fseek(arq,pos,0);
 				fread(&reg,sizeof(reg),1,arq);
 				ir(l); printf("Deseja realmente EXCLUIR o participante (%s) SIM (S) ou NAO (N)",reg.descr);
-				ir(l); printf("Excluir esse participante também ira excluir controles cadastrados com esse participante!");
+				ir(l); printf("Excluir esse participante tambÃ©m ira excluir controles cadastrados com esse participante!");
 				do
 				{
 					op = toupper(getch());
@@ -1652,7 +1644,7 @@ void excLogCamp(void)
 			fseek(ptr, pos, 0);
 			fread(&reg, sizeof(reg),1,ptr);
 			ir(l); printf("Deseja realmente excluir '%s'?  [S] SIM ou [N] NAO", reg.titulo);	
-			ir(l); printf("Excluir esse campeonato também ira excluir controles cadastrados com esse campeonato!");
+			ir(l); printf("Excluir esse campeonato tambÃ©m ira excluir controles cadastrados com esse campeonato!");
 			op = toupper(getch());
 			if(op == 'S')
 			{
@@ -2454,19 +2446,19 @@ void inserir(void)
 	ptr = fopen("participantes.dat","wb");
 	
 	regPart.cod = 1;
-	strcpy(regPart.descr, "Marcelo “coldzera” David");
+	strcpy(regPart.descr, "Marcelo Â“coldzeraÂ” David");
 	regPart.status = 1;
 	fwrite(&regPart,sizeof(participantes),1,ptr);
 	regPart.cod = 2;
-	strcpy(regPart.descr, "Olof “olofmeister” Kajbjer");
+	strcpy(regPart.descr, "Olof Â“olofmeisterÂ” Kajbjer");
 	regPart.status = 1;
 	fwrite(&regPart,sizeof(participantes),1,ptr);
 	regPart.cod = 3;
-	strcpy(regPart.descr, "Ladislav “GuardiaN” Kovács");
+	strcpy(regPart.descr, "Ladislav Â“GuardiaNÂ” KovÃ¡cs");
 	regPart.status = 1;
 	fwrite(&regPart,sizeof(participantes),1,ptr);
 	regPart.cod = 4;
-	strcpy(regPart.descr, "Nicolai “dev1ce” Reedtz");
+	strcpy(regPart.descr, "Nicolai Â“dev1ceÂ” Reedtz");
 	regPart.status = 1;
 	fwrite(&regPart,sizeof(participantes),1,ptr);
 	regPart.cod = 5;
